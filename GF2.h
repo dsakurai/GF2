@@ -71,7 +71,7 @@ namespace Eigen {
         // https://eigen.tuxfamily.org/dox/structEigen_1_1NumTraits.html
         enum {
             IsComplex = 0,
-            IsInteger = 0, // This likely indicates that the class is not a field. In this case it is a field, so it might work...
+            IsInteger = 1, // This likely indicates that the class is not a field. In this case it is a field, so it might work even if set to 0...
             IsSigned = 0,
             RequireInitialization = 1,
             ReadCost = 1,
