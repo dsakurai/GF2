@@ -1,5 +1,5 @@
 # GF2
-Modulo 2 (aka GF2) arithmetics for matrix computation, that can be used in CGAL and Eigen.
+Modulo 2 (aka GF2) arithmetics for matrix computation that can be used in CGAL and Eigen.
 The implementation is experimental and is not well tested.
 
 CGAL has a good chance of correctness since its linear algebra package is tested with quotient numbers for doing exact computation.
