@@ -48,7 +48,8 @@ int main() {
         Matrix_mod2 A (2, 2);
         A << 1, 1,
              1, 0;
-        Eigen::FullPivLU<Matrix_mod2> lu_decomp(A);
+        // can be used if IsInteger is set to 0, but I'm not sure if it gives the correct answer.
+//        Eigen::FullPivLU<Matrix_mod2> lu_decomp(A);
     }
 
     return 0;
