@@ -64,23 +64,4 @@ public:
     }
 };
 
-#include <Eigen/Core>
-namespace Eigen {
-    template <>
-    struct NumTraits<GF2> : NumTraits<int> {
-        // https://eigen.tuxfamily.org/dox/structEigen_1_1NumTraits.html
-        enum {
-            IsComplex = 0,
-            IsInteger = 1, // This likely indicates that the class is not a field. In this case it is a field, so it might work even if set to 0...
-            IsSigned = 0,
-            RequireInitialization = 1,
-            ReadCost = 1,
-            AddCost = 3,
-            MulCost = 3
-        };
-    };
-}  // namespace Eigen
-
-bool isfinite(const GF2 &) { return true; }
-
 #endif //TEST_EIGEN_GF2_H
