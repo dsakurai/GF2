@@ -13,7 +13,9 @@ public:
     GF2() = default;
     GF2(int v): value(v){}
 
-    bool operator==(const GF2&) const = default;
+    bool operator==(const GF2& that) const {
+        return this->value == that.value;
+    }
 
     GF2 operator*(const GF2& that) const {
         return this->value * that.value;
