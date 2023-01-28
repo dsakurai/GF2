@@ -10,15 +10,19 @@ set(CGAL_DO_NOT_WARN_ABOUT_CMAKE_BUILD_TYPE True)
 add_executable(test_eigen main_eigen.cpp GF2.h)
 
 find_package(Eigen3 CONFIG)
-target_link_libraries(test_eigen
-        PUBLIC
-            Eigen3::Eigen
-        )
+if (Eigen3_FOUND)
+    target_link_libraries(test_eigen
+            PUBLIC
+                Eigen3::Eigen
+            )
+endif (Eigen3_FOUND)
 
 add_executable(test_cgal main_cgal.cpp GF2.h)
 
 find_package(CGAL CONFIG)
+if (CGAL_FOUND)
 target_link_libraries(test_cgal
         PUBLIC
         CGAL::CGAL
         )
+endif (CGAL_FOUND)
